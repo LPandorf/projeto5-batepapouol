@@ -1,0 +1,296 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #F3F3F3;
+}
+.page{
+    display: none;
+}
+.logo{
+    height: 53px;
+    width: 75px;
+    left: 22px;
+    top: 16px;
+    border-radius: 0px;
+    padding-left: 15px;
+}
+.opaque{
+    height: 130vh;
+    width: calc(100vw - 300px);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4);;
+    display: none;
+}
+.top{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem grey);
+    z-index: 1;
+}
+.left{
+    display: flex;
+}
+.margem{
+    width: 100%;
+    min-height: 5px;
+}
+.menunames{
+    padding-left: 7px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+.sendmsg{
+    height: 30px;
+    width: 310px;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-left: 10px;
+    border: none;
+}
+.paper-plane-outline{
+    font-size: 26px;
+    padding-right: 30px;
+    padding-left: 17px;
+}
+.chat{
+    width: 100%;
+    height: 100vh;
+    padding-top: 106px;
+    padding-bottom: 84px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    display: inline-flex;
+}
+.msgreceivedstatus{
+    width: 100vw;
+    height: auto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 7px;
+    background-color: #DCDCDC;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.msgreceivedmessage{
+    background-color: white;
+    width: 100vw;
+    height: auto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.msgreceivedreservada{
+    background-color: #FFDEDE;
+    width: 100vw;
+    height: auto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.msglength{
+    width: 97vw;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.tempo{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: grey;
+    padding-right: 5px;
+}
+.para, .texto{
+    max-width: 100%;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-right: 5px;    
+}
+.para{
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.botaomenu{
+    padding-right: 17px;
+    width: 30px;
+}
+.menu{
+    width: 300px;
+    height: 100vh;
+    position: absolute;
+    background-color: white;
+    right: 0px;
+    top: 0;
+    transition: linear;
+    transition-duration: 0.2s;
+    display: none;
+}
+.option{
+    position: absolute;
+    width: 100%;
+}
+.all, .pvd, .public{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    min-height: 36px;
+    padding-left: 7px;
+}
+.people-icon, .lock-closed-icon, .lock-open-icon, .person-circle-icon{
+    font-size: 23px;
+}
+.people-menu-icon{
+    font-size: 30px;
+    padding-right: 17px;
+}
+.checkmark-outline-icon{
+    color: green;
+    width: 23px;
+    padding-right: 7px;
+}
+.title, .subtitle{
+    height: 84px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    width: 100%;
+    filter: drop-shadow(0 0 0.75rem grey);
+}
+.subtitle{
+    height: 66px;
+}
+.peopleon{
+    overflow-x: hidden;
+    display: inline-flex;
+    flex-direction: column;
+    max-height: 50vh;
+    width: 100%;
+}
+footer{
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    filter: drop-shadow(0 0 0.75rem grey);
+    position: fixed;
+    bottom: 0;
+    z-index: 0;
+    padding-left: 10px;
+}
+.login{
+    width: 100%;
+    height: calc(100% - 90px);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    top: 0;
+    background-color: white;
+    z-index: 4;
+    padding-top: 90px;
+}
+.logop{
+    width: 130px;
+    height: 92px;
+    padding-bottom: 94px;
+}
+input{
+    height: 54px;
+    width: 261px;
+    left: 57px;
+    top: 258px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: center;
+    border-color:  #D7D7D7;
+}
+.margem{
+    width: 100%;
+    height: 16px;
+}
+button{
+    height: 45px;
+    width: 109px;
+    left: 133px;
+    top: 327px;
+    border-radius: 9px;
+    border: none;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #696969;
+}
