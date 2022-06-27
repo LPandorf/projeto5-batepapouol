@@ -1,9 +1,9 @@
 //mensagens no chat
-let promessachat;
 let mensagens;
+let achat;
 function msgOfChat() {
-    promessachat = axios.get("  SLA OQ  ");
-    promessachat.then(sendAnser);
+    achat = axios.get("https://mock-api.driven.com.br/api/v6/uol/messages");
+    achat.then(sendAnser);
 }
 function sendAnser(resposta) {
     mensagens.innerHTML="";
@@ -47,22 +47,22 @@ function sendAnser(resposta) {
     elementoQueQueroQueApareca.scrollIntoView();
 }
 setInterval(() => {
-    mensagens = document.querySelector(".chat")
-    promessa = axios.get("  SLA OQ  ");
-    promessa.then(sendAnser);
+    mensagens = document.querySelector("https://mock-api.driven.com.br/api/v6/uol/messages")
+    a = axios.get("https://mock-api.driven.com.br/api/v6/uol/messages");
+    a.then(sendAnser);
 },3000);
 console.log(sendAnser);
 
-
-//pessoas on                                                        (não estou confiante com esta parte)
-let promessaentrar;
-let pessoason;
-let icones;
-let pessoamarcada;
+/*
+//pessoas on                                                    (não estou confiante com esta parte)
 let icone;
+let icones;
 let primeiroicone;
-promessaentrar = axios.get("    SLA OQ  ");
-promessaentrar.then(peopleOn);
+let pessoason; 
+let pessoamarcada;                                                      
+let aentrar;
+aentrar = axios.get("    SLA OQ  ");
+aentrar.then(peopleOn);
 function peopleOn(nomes) {
     pessoason = nomes.data;
     for(let x=0; x < pessoason.length; x++){
@@ -85,58 +85,59 @@ setInterval(() => {
         </div>
         <ion-icon class="checkmark-outline-icon" name="checkmark-outline" id="icon"></ion-icon>
     </div>`;
-    promessaentrar = axios.get("    SLA OQ  ");
-    promessaentrar.then(peopleOn);
-},10000);
+    aentrar = axios.get("    SLA OQ  ");
+    aentrar.then(peopleOn);
+},10000);*/
 
 
 //entrar
-let nome;
+//let nome;
 let mensagem;
-let promessarequisicao;
-let entrarnasala;
-function takename(){
-    nome = document.querySelector(".name").value;
+let entrarsala;
+let arequisicao;
+
+function takeName(){
+    let nome = document.querySelector(".name").value;
     if(nome){
         document.getElementById("login").style.display="none";
         document.getElementById("page").style.display="block";
-        getOnChat();
+        getOnChat(nome);
     }
 }
-function getOnChat(){
-    entrar = axios.post("   SLA OQ  ", 
+function getOnChat(nome){
+    entrar = axios.post("https://mock-api.driven.com.br/api/v6/uol/participants",
     {
         name: nome
     }
     ).then(resposta => {console.log(resposta)}).catch(deuRuim);
-    keepConection()
+    keepConection(nome)
     msgOfChat()
 }
-function keepConection(){
+function keepConection(nome){
     setInterval(() => {
-        entrarnasala = axios.post("   SLA OQ  ",
+        entrarsala = axios.post("https://mock-api.driven.com.br/api/v6/uol/status",
         {
             name: nome
         }
         ).then(resposta => {console.log(resposta)}).catch(deuRuim);
     },5000);
 }
-function sengMsg() {
+function sendMsg() {
     mensagem = document.querySelector(".sendmsg").value;
     if(mensagem){
-        sendMsgServer();
+        sendMsgServer(/texto/);
     }
 }
 function sendMsgServer(){
-    promessarequisicao = axios.post("   SLA OQ  ",
+    arequisicao = axios.post("   SLA OQ  ",
     {
         from: nome,
         to: 'all',
         text: mensagem,
         type: 'message'
     }).then(resposta => {
-        promessa = axios.get("   SLA OQ  ");
-        promessa.then(enviarResposta);
+        a = axios.get("   SLA OQ  ");
+        a.then(enviarResposta);
         document.getElementById("sendmsg").value='';}).catch(meterOPe);
 }
 document.addEventListener("keypress", function(e) {
@@ -151,3 +152,14 @@ function sair() {
 function erro(){ 
     alert("erro")
 }
+
+
+/*document.addEventListener("keypress", function(e) {
+  if(e.key === 'Enter') {
+  
+      var btn = document.querySelector("#submit");
+    
+    btn.click();
+  
+  }
+});*/
