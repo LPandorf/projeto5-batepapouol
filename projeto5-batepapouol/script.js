@@ -122,7 +122,7 @@ function keepConection(nome){
         ).then(resposta => {console.log(resposta)}).catch(deuRuim);
     },5000);
 }
-function sendMsg() {
+function sendMsg(mensagem) {
     mensagem = document.querySelector(".sendmsg").value;
     if(mensagem){
         sendMsgServer(/texto/);
